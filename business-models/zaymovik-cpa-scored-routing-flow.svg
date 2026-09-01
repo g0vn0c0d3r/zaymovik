@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="2200" viewBox="0 0 1200 2200" role="img" aria-labelledby="title desc">
   <title id="title">Вертикальная схема CPA-модели Zaymovik</title>
-  <desc id="desc">Несколько CPA-офферов передают заявки в единую платформу. После проверок платформа присваивает клиенту скоринговый балл и применяет порог отсечения. Затем балансировщик выбирает одну доступную МФО, которая рассчитывает официальный ПДН, принимает финальное кредитное решение и возвращает статус.</desc>
+  <desc id="desc">Несколько CPA-офферов передают заявки в единую платформу. После проверок платформа присваивает клиенту скоринговый балл и применяет порог отсечения. Скоринговый результат и данные о пуле доступных МФО поступают в балансировщик, который выбирает одну МФО.</desc>
 
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
@@ -82,21 +82,21 @@
 
   <path class="arrow" d="M600 890 V935"/>
 
-  <rect class="box" x="300" y="1090" width="600" height="90" rx="16" fill="#ffedd5" stroke="#fb923c"/>
-  <text x="600" y="1127" class="label">
-    <tspan x="600">Пул доступных МФО</tspan>
-    <tspan x="600" dy="27" class="small">МФО 1 · МФО 2 · МФО N</tspan>
+  <rect class="box" x="50" y="1090" width="300" height="90" rx="16" fill="#ffedd5" stroke="#fb923c"/>
+  <text x="200" y="1127" class="label">
+    <tspan x="200">Пул доступных МФО</tspan>
+    <tspan x="200" dy="27" class="small">ликвидность · лимиты · веса</tspan>
   </text>
 
-  <path class="arrow" d="M600 1045 V1090"/>
+  <path class="arrow" d="M600 1045 V1225"/>
 
   <polygon class="box" points="600,1225 920,1315 600,1405 280,1315" fill="#fed7aa" stroke="#f97316"/>
   <text x="600" y="1304" class="label">
     <tspan x="600">Балансировщик</tspan>
-    <tspan x="600" dy="28" class="small">выбирает одну МФО и один маршрут</tspan>
+    <tspan x="600" dy="28" class="small">распределяет заявки со скоринговым баллом</tspan>
   </text>
 
-  <path class="arrow" d="M600 1180 V1225"/>
+  <path class="arrow" d="M200 1180 V1315 H280"/>
 
   <rect x="24" y="1475" width="1152" height="690" rx="22" fill="#f0fdf4" stroke="#bbf7d0"/>
   <text x="50" y="1510" class="layer">ВЫБРАННАЯ МФО И РЕЗУЛЬТАТ</text>
