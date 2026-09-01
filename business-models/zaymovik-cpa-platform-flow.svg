@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="2020" viewBox="0 0 1200 2020" role="img" aria-labelledby="title desc">
+  <title id="title">Вертикальная схема CPA-модели Zaymovik</title>
+  <desc id="desc">Несколько CPA-офферов передают заявки в единую платформу. После проверок балансировщик выбирает одну доступную МФО, которая принимает кредитное решение и возвращает статус.</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+    <style>
+      .title { font: 700 36px -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; fill: #0f172a; }
+      .layer { font: 700 18px -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; letter-spacing: 1.5px; fill: #64748b; }
+      .label { font: 600 24px -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; fill: #0f172a; text-anchor: middle; }
+      .small { font: 400 18px -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; fill: #334155; text-anchor: middle; }
+      .note { font: 500 17px -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; fill: #475569; text-anchor: middle; }
+      .arrow { fill: none; stroke: #475569; stroke-width: 3; marker-end: url(#arrow); }
+      .feedback { fill: none; stroke: #64748b; stroke-width: 3; stroke-dasharray: 10 8; marker-end: url(#arrow); }
+      .box { stroke-width: 2.5; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="2020" fill="#ffffff"/>
+  <text x="600" y="48" class="title" text-anchor="middle">CPA-модель Zaymovik</text>
+
+  <rect x="24" y="75" width="1152" height="490" rx="22" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="50" y="110" class="layer">ПРИВЛЕЧЕНИЕ</text>
+
+  <rect class="box" x="260" y="125" width="680" height="86" rx="16" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="600" y="176" class="label">Веб-мастера и финансовые витрины</text>
+
+  <rect class="box" x="410" y="255" width="380" height="78" rx="16" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="600" y="303" class="label">CPA-сети</text>
+
+  <rect class="box" x="80" y="415" width="300" height="90" rx="14" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="230" y="452" class="label">
+    <tspan x="230">Оффер A</tspan>
+    <tspan x="230" dy="27" class="small">сайт Zaymovik</tspan>
+  </text>
+
+  <rect class="box" x="450" y="415" width="300" height="90" rx="14" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="600" y="452" class="label">
+    <tspan x="600">Оффер B</tspan>
+    <tspan x="600" dy="27" class="small">отдельный бренд</tspan>
+  </text>
+
+  <rect class="box" x="820" y="415" width="300" height="90" rx="14" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="970" y="452" class="label">
+    <tspan x="970">Оффер C</tspan>
+    <tspan x="970" dy="27" class="small">отдельный бренд</tspan>
+  </text>
+
+  <path class="arrow" d="M600 211 V255"/>
+  <path class="arrow" d="M600 333 V365 H230 V415"/>
+  <path class="arrow" d="M600 333 V415"/>
+  <path class="arrow" d="M600 333 V365 H970 V415"/>
+
+  <rect x="24" y="590" width="1152" height="720" rx="22" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="50" y="625" class="layer">ЕДИНАЯ ПЛАТФОРМА</text>
+
+  <rect class="box" x="300" y="655" width="600" height="90" rx="16" fill="#ffedd5" stroke="#fb923c"/>
+  <text x="600" y="692" class="label">
+    <tspan x="600">Единый приём заявок</tspan>
+    <tspan x="600" dy="27" class="small">общая база для всех сайтов</tspan>
+  </text>
+
+  <path class="arrow" d="M230 505 V575 H480 V655"/>
+  <path class="arrow" d="M600 505 V655"/>
+  <path class="arrow" d="M970 505 V575 H720 V655"/>
+
+  <rect class="box" x="300" y="800" width="600" height="100" rx="16" fill="#ffedd5" stroke="#fb923c"/>
+  <text x="600" y="837" class="label">
+    <tspan x="600">Проверка заявки</tspan>
+    <tspan x="600" dy="28" class="small">валидация · антифрод · дедупликация</tspan>
+  </text>
+
+  <path class="arrow" d="M600 745 V800"/>
+
+  <rect class="box" x="300" y="955" width="600" height="90" rx="16" fill="#ffedd5" stroke="#fb923c"/>
+  <text x="600" y="992" class="label">
+    <tspan x="600">Пул доступных МФО</tspan>
+    <tspan x="600" dy="27" class="small">МФО 1 · МФО 2 · МФО N</tspan>
+  </text>
+
+  <path class="arrow" d="M600 900 V955"/>
+
+  <polygon class="box" points="600,1100 920,1190 600,1280 280,1190" fill="#fed7aa" stroke="#f97316"/>
+  <text x="600" y="1179" class="label">
+    <tspan x="600">Балансировщик</tspan>
+    <tspan x="600" dy="28" class="small">выбирает одну МФО и один маршрут</tspan>
+  </text>
+
+  <path class="arrow" d="M600 1045 V1100"/>
+
+  <rect x="24" y="1335" width="1152" height="650" rx="22" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="50" y="1370" class="layer">ВЫБРАННАЯ МФО И РЕЗУЛЬТАТ</text>
+
+  <rect class="box" x="280" y="1410" width="640" height="110" rx="16" fill="#dcfce7" stroke="#4ade80"/>
+  <text x="600" y="1451" class="label">
+    <tspan x="600">Выбранная МФО</tspan>
+    <tspan x="600" dy="28" class="small">скоринг · официальный ПДН · решение · выдача</tspan>
+  </text>
+
+  <path class="arrow" d="M600 1280 V1410"/>
+
+  <rect class="box" x="280" y="1590" width="640" height="90" rx="16" fill="#dcfce7" stroke="#4ade80"/>
+  <text x="600" y="1627" class="label">
+    <tspan x="600">Статус возвращается в платформу</tspan>
+    <tspan x="600" dy="27" class="small">принята · отказ · одобрена · выдано</tspan>
+  </text>
+
+  <path class="arrow" d="M600 1520 V1590"/>
+
+  <rect class="box" x="250" y="1760" width="700" height="100" rx="16" fill="#e2e8f0" stroke="#64748b"/>
+  <text x="600" y="1797" class="label">
+    <tspan x="600">Статистика и экономика платформы</tspan>
+    <tspan x="600" dy="28" class="small">сверка · выплаты · маржа · анализ маршрутов</tspan>
+  </text>
+
+  <path class="arrow" d="M600 1680 V1760"/>
+
+  <path class="feedback" d="M950 1810 H1120 V1190 H920"/>
+  <text x="1092" y="1500" class="note" transform="rotate(-90 1092 1500)">анализ → настройка весов распределения</text>
+</svg>
