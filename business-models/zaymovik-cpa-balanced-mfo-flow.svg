@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="2200" viewBox="0 0 1200 2200" role="img" aria-labelledby="title desc">
   <title id="title">Вертикальная схема CPA-модели Zaymovik</title>
-  <desc id="desc">Несколько CPA-офферов передают заявки в единую платформу. После проверок платформа присваивает клиенту скоринговый балл и применяет порог отсечения. Скоринговый результат и данные о пуле доступных МФО поступают в балансировщик, который выбирает одну МФО.</desc>
+  <desc id="desc">Несколько CPA-офферов передают заявки в единую платформу. После проверок платформа присваивает клиенту скоринговый балл. Балансировщик распределяет каждую прошедшую порог заявку в одну из доступных МФО.</desc>
 
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
@@ -53,7 +53,7 @@
   <path class="arrow" d="M600 333 V415"/>
   <path class="arrow" d="M600 333 V365 H970 V415"/>
 
-  <rect x="24" y="590" width="1152" height="860" rx="22" fill="#fff7ed" stroke="#fed7aa"/>
+  <rect x="24" y="590" width="1152" height="770" rx="22" fill="#fff7ed" stroke="#fed7aa"/>
   <text x="50" y="625" class="layer">ЕДИНАЯ ПЛАТФОРМА</text>
 
   <rect class="box" x="300" y="655" width="600" height="90" rx="16" fill="#ffedd5" stroke="#fb923c"/>
@@ -82,49 +82,58 @@
 
   <path class="arrow" d="M600 890 V935"/>
 
-  <rect class="box" x="50" y="1090" width="300" height="90" rx="16" fill="#ffedd5" stroke="#fb923c"/>
-  <text x="200" y="1127" class="label">
-    <tspan x="200">Пул доступных МФО</tspan>
-    <tspan x="200" dy="27" class="small">ликвидность · лимиты · веса</tspan>
-  </text>
+  <path class="arrow" d="M600 1045 V1120"/>
 
-  <path class="arrow" d="M600 1045 V1225"/>
-
-  <polygon class="box" points="600,1225 920,1315 600,1405 280,1315" fill="#fed7aa" stroke="#f97316"/>
-  <text x="600" y="1304" class="label">
+  <polygon class="box" points="600,1120 920,1210 600,1300 280,1210" fill="#fed7aa" stroke="#f97316"/>
+  <text x="600" y="1199" class="label">
     <tspan x="600">Балансировщик</tspan>
-    <tspan x="600" dy="28" class="small">распределяет заявки со скоринговым баллом</tspan>
+    <tspan x="600" dy="28" class="small">балл · ликвидность · лимиты · веса</tspan>
+    <tspan x="600" dy="24" class="note">одна заявка → одна МФО</tspan>
   </text>
 
-  <path class="arrow" d="M200 1180 V1315 H280"/>
+  <rect x="24" y="1385" width="1152" height="780" rx="22" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="50" y="1420" class="layer">МФО И РЕЗУЛЬТАТ</text>
 
-  <rect x="24" y="1475" width="1152" height="690" rx="22" fill="#f0fdf4" stroke="#bbf7d0"/>
-  <text x="50" y="1510" class="layer">ВЫБРАННАЯ МФО И РЕЗУЛЬТАТ</text>
-
-  <rect class="box" x="280" y="1545" width="640" height="110" rx="16" fill="#dcfce7" stroke="#4ade80"/>
-  <text x="600" y="1586" class="label">
-    <tspan x="600">Выбранная МФО</tspan>
-    <tspan x="600" dy="28" class="small">официальный ПДН · финальное решение · выдача</tspan>
+  <rect class="box" x="60" y="1470" width="320" height="110" rx="16" fill="#dcfce7" stroke="#4ade80"/>
+  <text x="220" y="1511" class="label">
+    <tspan x="220">МФО 1</tspan>
+    <tspan x="220" dy="28" class="small">ПДН · решение · выдача</tspan>
   </text>
 
-  <path class="arrow" d="M600 1405 V1545"/>
+  <rect class="box" x="440" y="1470" width="320" height="110" rx="16" fill="#dcfce7" stroke="#4ade80"/>
+  <text x="600" y="1511" class="label">
+    <tspan x="600">МФО 2</tspan>
+    <tspan x="600" dy="28" class="small">ПДН · решение · выдача</tspan>
+  </text>
 
-  <rect class="box" x="280" y="1725" width="640" height="90" rx="16" fill="#dcfce7" stroke="#4ade80"/>
-  <text x="600" y="1762" class="label">
+  <rect class="box" x="820" y="1470" width="320" height="110" rx="16" fill="#dcfce7" stroke="#4ade80"/>
+  <text x="980" y="1511" class="label">
+    <tspan x="980">МФО N</tspan>
+    <tspan x="980" dy="28" class="small">ПДН · решение · выдача</tspan>
+  </text>
+
+  <path class="arrow" d="M600 1300 V1435 H220 V1470"/>
+  <path class="arrow" d="M600 1300 V1470"/>
+  <path class="arrow" d="M600 1435 H980 V1470"/>
+
+  <rect class="box" x="280" y="1690" width="640" height="90" rx="16" fill="#dcfce7" stroke="#4ade80"/>
+  <text x="600" y="1727" class="label">
     <tspan x="600">Статус возвращается в платформу</tspan>
     <tspan x="600" dy="27" class="small">принята · отказ · одобрена · выдано</tspan>
   </text>
 
-  <path class="arrow" d="M600 1655 V1725"/>
+  <path class="arrow" d="M220 1580 V1640 H400 V1690"/>
+  <path class="arrow" d="M600 1580 V1690"/>
+  <path class="arrow" d="M980 1580 V1640 H800 V1690"/>
 
-  <rect class="box" x="250" y="1885" width="700" height="100" rx="16" fill="#e2e8f0" stroke="#64748b"/>
-  <text x="600" y="1922" class="label">
+  <rect class="box" x="250" y="1870" width="700" height="100" rx="16" fill="#e2e8f0" stroke="#64748b"/>
+  <text x="600" y="1907" class="label">
     <tspan x="600">Статистика и экономика платформы</tspan>
     <tspan x="600" dy="28" class="small">сверка · выплаты · маржа · анализ маршрутов</tspan>
   </text>
 
-  <path class="arrow" d="M600 1815 V1885"/>
+  <path class="arrow" d="M600 1780 V1870"/>
 
-  <path class="feedback" d="M950 1935 H1120 V1315 H920"/>
-  <text x="1092" y="1640" class="note" transform="rotate(-90 1092 1640)">анализ → настройка порога и весов</text>
+  <path class="feedback" d="M950 1920 H1150 V1210 H920"/>
+  <text x="1122" y="1570" class="note" transform="rotate(-90 1122 1570)">анализ → настройка порога и весов</text>
 </svg>

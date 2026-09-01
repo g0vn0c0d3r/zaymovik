@@ -102,7 +102,7 @@ EPC = подтверждённая выплата веб-мастеру / кол
 
 ## 4. Общая схема
 
-![Вертикальная схема CPA-модели Zaymovik](./zaymovik-cpa-scored-routing-flow.svg)
+![Вертикальная схема CPA-модели Zaymovik](./zaymovik-cpa-balanced-mfo-flow.svg)
 
 ## 5. Подключение партнёрской МФО
 
