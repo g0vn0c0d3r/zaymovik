@@ -49,7 +49,7 @@ Zaymovik — не кредитор, а платформа привлечения
 
 ## 3. Общая схема
 
-![Схема CPA-модели Zaymovik](./zaymovik-cpa-flow.svg)
+![Вертикальная схема CPA-модели Zaymovik](./zaymovik-cpa-flow-vertical.svg)
 
 ## 4. Логика работы
 
