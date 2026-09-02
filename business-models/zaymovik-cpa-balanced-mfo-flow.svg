@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="2200" viewBox="0 0 1200 2200" role="img" aria-labelledby="title desc">
   <title id="title">Вертикальная схема CPA-модели Zaymovik</title>
-  <desc id="desc">Несколько CPA-офферов передают заявки в единую платформу. После проверок платформа присваивает клиенту скоринговый балл. Балансировщик распределяет каждую прошедшую порог заявку в одну из доступных МФО.</desc>
+  <desc id="desc">Несколько CPA-офферов передают заявки в единую платформу. После проверок платформа присваивает клиенту скоринговый балл. Балансировщик распределяет каждую прошедшую порог заявку в одну из доступных МФО. После выдачи данные займа отображаются в едином личном кабинете Zaymovik.</desc>
 
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
@@ -116,24 +116,32 @@
   <path class="arrow" d="M600 1300 V1470"/>
   <path class="arrow" d="M600 1435 H980 V1470"/>
 
-  <rect class="box" x="280" y="1690" width="640" height="90" rx="16" fill="#dcfce7" stroke="#4ade80"/>
-  <text x="600" y="1727" class="label">
-    <tspan x="600">Статус возвращается в платформу</tspan>
-    <tspan x="600" dy="27" class="small">принята · отказ · одобрена · выдано</tspan>
+  <rect class="box" x="260" y="1680" width="680" height="100" rx="16" fill="#dcfce7" stroke="#4ade80"/>
+  <text x="600" y="1717" class="label">
+    <tspan x="600">Статус и данные займа возвращаются</tspan>
+    <tspan x="600" dy="28" class="small">кредитор · долг · график · платежи</tspan>
   </text>
 
-  <path class="arrow" d="M220 1580 V1640 H400 V1690"/>
-  <path class="arrow" d="M600 1580 V1690"/>
-  <path class="arrow" d="M980 1580 V1640 H800 V1690"/>
+  <path class="arrow" d="M220 1580 V1635 H400 V1680"/>
+  <path class="arrow" d="M600 1580 V1680"/>
+  <path class="arrow" d="M980 1580 V1635 H800 V1680"/>
 
-  <rect class="box" x="250" y="1870" width="700" height="100" rx="16" fill="#e2e8f0" stroke="#64748b"/>
-  <text x="600" y="1907" class="label">
-    <tspan x="600">Статистика и экономика платформы</tspan>
-    <tspan x="600" dy="28" class="small">сверка · выплаты · маржа · анализ маршрутов</tspan>
+  <rect class="box" x="80" y="1880" width="660" height="120" rx="16" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="410" y="1917" class="label">
+    <tspan x="410">Единый ЛК Zaymovik</tspan>
+    <tspan x="410" dy="28" class="small">один кабинет для клиентов всех сайтов</tspan>
+    <tspan x="410" dy="24" class="note">отображает данные выбранной МФО</tspan>
   </text>
 
-  <path class="arrow" d="M600 1780 V1870"/>
+  <rect class="box" x="780" y="1880" width="340" height="120" rx="16" fill="#e2e8f0" stroke="#64748b"/>
+  <text x="950" y="1926" class="label">
+    <tspan x="950">Статистика</tspan>
+    <tspan x="950" dy="28" class="small">сверка · экономика</tspan>
+  </text>
 
-  <path class="feedback" d="M950 1920 H1150 V1210 H920"/>
-  <text x="1122" y="1570" class="note" transform="rotate(-90 1122 1570)">анализ → настройка порога и весов</text>
+  <path class="arrow" d="M600 1780 V1830 H410 V1880"/>
+  <path class="arrow" d="M600 1830 H950 V1880"/>
+
+  <path class="feedback" d="M950 2000 V2110 H1150 V1210 H920"/>
+  <text x="1122" y="1605" class="note" transform="rotate(-90 1122 1605)">анализ → настройка порога и весов</text>
 </svg>
