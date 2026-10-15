@@ -1,147 +1,104 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="2200" viewBox="0 0 1200 2200" role="img" aria-labelledby="title desc">
-  <title id="title">Вертикальная схема CPA-модели Zaymovik</title>
-  <desc id="desc">Несколько CPA-офферов передают заявки в единую платформу. После проверок платформа присваивает клиенту скоринговый балл. Балансировщик распределяет каждую прошедшую порог заявку в одну из доступных МФО. После выдачи данные займа отображаются в едином личном кабинете Zaymovik.</desc>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1660" viewBox="0 0 1200 1660" role="img" aria-labelledby="title desc">
+  <title id="title">Zaymovik — путь заявки</title>
+  <desc id="desc">Источники трафика ведут на разные сайты. Клиент вводит имя и телефон. По номеру телефона проверяется единая база клиентов: новый регистрируется по SMS, существующий входит по SMS. В едином ЛК клиент заполняет заявку. Скоринг оценивает заявку: отказ ведёт на отказную витрину, прохождение порога отсечения означает допуск к выдаче. Балансировщик выбирает одну готовую выдать МФО, учитывая историю клиента у каждого кредитора, активные займы, ликвидность и лимиты. По правилу платформы исключаются МФО, где у клиента есть активный заём; погашенный заём сам по себе не исключает МФО. Выбранная МФО оформляет и выдаёт заём. В этой модели переход на отказную витрину предусмотрен только от скоринга.</desc>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#475569"/>
     </marker>
     <style>
-      .title { font: 700 36px -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; fill: #0f172a; }
-      .layer { font: 700 18px -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; letter-spacing: 1.5px; fill: #64748b; }
-      .label { font: 600 24px -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; fill: #0f172a; text-anchor: middle; }
-      .small { font: 400 18px -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; fill: #334155; text-anchor: middle; }
-      .note { font: 500 17px -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; fill: #475569; text-anchor: middle; }
-      .arrow { fill: none; stroke: #475569; stroke-width: 3; marker-end: url(#arrow); }
-      .feedback { fill: none; stroke: #64748b; stroke-width: 3; stroke-dasharray: 10 8; marker-end: url(#arrow); }
-      .box { stroke-width: 2.5; }
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
+      .title { font-size:36px; font-weight:700; fill:#0f172a; text-anchor:middle; }
+      .layer { font-size:18px; font-weight:700; letter-spacing:1.4px; fill:#64748b; }
+      .label { font-size:24px; font-weight:600; fill:#0f172a; text-anchor:middle; }
+      .small { font-size:18px; font-weight:400; fill:#334155; text-anchor:middle; }
+      .note { font-size:17px; font-weight:400; fill:#475569; text-anchor:middle; }
+      .connector { fill:none; stroke:#475569; stroke-width:3; stroke-linejoin:round; }
+      .arrow { fill:none; stroke:#475569; stroke-width:3; stroke-linejoin:round; marker-end:url(#arrow); }
+      .box { stroke-width:2; }
     </style>
   </defs>
-
-  <rect width="1200" height="2200" fill="#ffffff"/>
-  <text x="600" y="48" class="title" text-anchor="middle">CPA-модель Zaymovik</text>
+  <rect width="1200" height="1660" fill="#ffffff"/>
+  <text x="600" y="48" class="title">Модель Zaymovik</text>
 
   <rect x="24" y="75" width="1152" height="490" rx="22" fill="#f8fafc" stroke="#e2e8f0"/>
   <text x="50" y="110" class="layer">ПРИВЛЕЧЕНИЕ</text>
-
-  <rect class="box" x="260" y="125" width="680" height="86" rx="16" fill="#dbeafe" stroke="#60a5fa"/>
-  <text x="600" y="176" class="label">Веб-мастера и финансовые витрины</text>
-
-  <rect class="box" x="410" y="255" width="380" height="78" rx="16" fill="#dbeafe" stroke="#60a5fa"/>
-  <text x="600" y="303" class="label">CPA-сети</text>
-
-  <rect class="box" x="80" y="415" width="300" height="90" rx="14" fill="#eff6ff" stroke="#93c5fd"/>
-  <text x="230" y="452" class="label">
-    <tspan x="230">Оффер A</tspan>
-    <tspan x="230" dy="27" class="small">сайт Zaymovik</tspan>
+  <rect class="box" x="180" y="135" width="840" height="110" rx="16" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="600" y="172" class="label">
+    <tspan x="600">Источники трафика</tspan>
+    <tspan x="600" dy="29" class="small">CPA-сети · контекст · соцсети · другие каналы</tspan>
+    <tspan x="600" dy="27" class="note">Одни и те же каналы для разных сайтов</tspan>
   </text>
+  <path class="connector" d="M600 245 V275 M210 275 H990"/>
+  <path class="arrow" d="M210 275 V310"/>
+  <path class="arrow" d="M600 275 V310"/>
+  <path class="arrow" d="M990 275 V310"/>
 
-  <rect class="box" x="450" y="415" width="300" height="90" rx="14" fill="#eff6ff" stroke="#93c5fd"/>
-  <text x="600" y="452" class="label">
-    <tspan x="600">Оффер B</tspan>
-    <tspan x="600" dy="27" class="small">отдельный бренд</tspan>
-  </text>
+  <rect id="site-a" class="box" x="60" y="310" width="300" height="80" rx="16" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="210" y="359" class="label">Сайт A</text>
+  <rect id="site-b" class="box" x="450" y="310" width="300" height="80" rx="16" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="600" y="359" class="label">Сайт B</text>
+  <rect id="site-new" class="box" x="840" y="310" width="300" height="80" rx="16" fill="#ffffff" stroke="#93c5fd" stroke-dasharray="8 6"/>
+  <text x="990" y="359" class="label">+ Новый сайт</text>
 
-  <rect class="box" x="820" y="415" width="300" height="90" rx="14" fill="#eff6ff" stroke="#93c5fd"/>
-  <text x="970" y="452" class="label">
-    <tspan x="970">Оффер C</tspan>
-    <tspan x="970" dy="27" class="small">отдельный бренд</tspan>
-  </text>
+  <path class="connector" d="M210 390 V420 H990 V390 M600 390 V420"/>
+  <path class="arrow" d="M600 420 V445"/>
+  <rect id="first-step" class="box" x="340" y="445" width="520" height="90" rx="16" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="600" y="482" class="label">Первый шаг на выбранном сайте</text>
+  <text x="600" y="511" class="small">Имя · телефон</text>
 
-  <path class="arrow" d="M600 211 V255"/>
-  <path class="arrow" d="M600 333 V365 H230 V415"/>
-  <path class="arrow" d="M600 333 V415"/>
-  <path class="arrow" d="M600 333 V365 H970 V415"/>
-
-  <rect x="24" y="590" width="1152" height="770" rx="22" fill="#fff7ed" stroke="#fed7aa"/>
+  <rect x="24" y="590" width="1152" height="800" rx="22" fill="#fff7ed" stroke="#fed7aa"/>
   <text x="50" y="625" class="layer">ЕДИНАЯ ПЛАТФОРМА</text>
+  <path class="arrow" d="M600 535 V655"/>
+  <rect id="intake" class="box" x="340" y="655" width="520" height="90" rx="16" fill="#ffedd5" stroke="#fb923c"/>
+  <text x="600" y="692" class="label">Единая база клиентов</text>
+  <text x="600" y="721" class="small">Поиск по номеру телефона</text>
 
-  <rect class="box" x="300" y="655" width="600" height="90" rx="16" fill="#ffedd5" stroke="#fb923c"/>
-  <text x="600" y="692" class="label">
-    <tspan x="600">Единый приём заявок</tspan>
-    <tspan x="600" dy="27" class="small">общая база для всех сайтов</tspan>
-  </text>
+  <path class="connector" d="M600 745 V775 M325 775 H875"/>
+  <path class="arrow" d="M325 775 V805"/>
+  <path class="arrow" d="M875 775 V805"/>
+  <rect id="register" class="box" x="160" y="805" width="330" height="90" rx="16" fill="#ffedd5" stroke="#fb923c"/>
+  <text x="325" y="842" class="label">Новый клиент</text>
+  <text x="325" y="871" class="small">Регистрация по SMS</text>
+  <rect id="login" class="box" x="710" y="805" width="330" height="90" rx="16" fill="#ffedd5" stroke="#fb923c"/>
+  <text x="875" y="842" class="label">Клиент уже есть</text>
+  <text x="875" y="871" class="small">Вход по SMS</text>
+  <path class="connector" d="M325 895 V925 H875 V895"/>
+  <path class="arrow" d="M600 925 V955"/>
 
-  <path class="arrow" d="M230 505 V575 H480 V655"/>
-  <path class="arrow" d="M600 505 V655"/>
-  <path class="arrow" d="M970 505 V575 H720 V655"/>
+  <rect id="single-account" class="box" x="340" y="955" width="520" height="90" rx="16" fill="#ffedd5" stroke="#fb923c"/>
+  <text x="600" y="992" class="label">Единый ЛК Zaymovik</text>
+  <text x="600" y="1021" class="small">Заполнение заявки</text>
 
-  <rect class="box" x="300" y="790" width="600" height="100" rx="16" fill="#ffedd5" stroke="#fb923c"/>
-  <text x="600" y="827" class="label">
-    <tspan x="600">Проверка заявки</tspan>
-    <tspan x="600" dy="28" class="small">валидация · антифрод · дедупликация</tspan>
-  </text>
+  <path class="arrow" d="M600 1045 V1105"/>
+  <rect id="scoring" class="box" x="340" y="1105" width="520" height="90" rx="16" fill="#ffedd5" stroke="#fb923c"/>
+  <text x="600" y="1142" class="label">Скоринг</text>
+  <text x="600" y="1171" class="small">Оценка заявки</text>
+  <path id="scoring-rejection" class="arrow" d="M860 1150 H920"/>
+  <text x="890" y="1133" class="note">Отказ</text>
 
-  <path class="arrow" d="M600 745 V790"/>
+  <rect id="refusal-showcase" class="box" x="920" y="1105" width="240" height="90" rx="16" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="1040" y="1142" class="label">Отказная витрина</text>
+  <text x="1040" y="1171" class="small">Внешние МФО</text>
 
-  <rect class="box" x="300" y="935" width="600" height="110" rx="16" fill="#ffedd5" stroke="#fb923c"/>
-  <text x="600" y="972" class="label">
-    <tspan x="600">Внутренний скоринг платформы</tspan>
-    <tspan x="600" dy="27" class="small">скоринговый балл · порог отсечения</tspan>
-  </text>
+  <path class="arrow" d="M600 1195 V1255"/>
+  <text x="680" y="1231" class="note">Пройден</text>
+  <rect id="balancer" class="box" x="340" y="1255" width="520" height="90" rx="16" fill="#ffedd5" stroke="#fb923c"/>
+  <text x="600" y="1292" class="label">Балансировщик</text>
+  <text x="600" y="1321" class="small">История клиента · активные займы · ликвидность</text>
 
-  <path class="arrow" d="M600 890 V935"/>
-
-  <path class="arrow" d="M600 1045 V1120"/>
-
-  <polygon class="box" points="600,1120 920,1210 600,1300 280,1210" fill="#fed7aa" stroke="#f97316"/>
-  <text x="600" y="1199" class="label">
-    <tspan x="600">Балансировщик</tspan>
-    <tspan x="600" dy="28" class="small">балл · ликвидность · лимиты · веса</tspan>
-    <tspan x="600" dy="24" class="note">одна заявка → одна МФО</tspan>
-  </text>
-
-  <rect x="24" y="1385" width="1152" height="780" rx="22" fill="#f0fdf4" stroke="#bbf7d0"/>
-  <text x="50" y="1420" class="layer">МФО И РЕЗУЛЬТАТ</text>
-
-  <rect class="box" x="60" y="1470" width="320" height="110" rx="16" fill="#dcfce7" stroke="#4ade80"/>
-  <text x="220" y="1511" class="label">
-    <tspan x="220">МФО 1</tspan>
-    <tspan x="220" dy="28" class="small">ПДН · решение · выдача</tspan>
-  </text>
-
-  <rect class="box" x="440" y="1470" width="320" height="110" rx="16" fill="#dcfce7" stroke="#4ade80"/>
-  <text x="600" y="1511" class="label">
-    <tspan x="600">МФО 2</tspan>
-    <tspan x="600" dy="28" class="small">ПДН · решение · выдача</tspan>
-  </text>
-
-  <rect class="box" x="820" y="1470" width="320" height="110" rx="16" fill="#dcfce7" stroke="#4ade80"/>
-  <text x="980" y="1511" class="label">
-    <tspan x="980">МФО N</tspan>
-    <tspan x="980" dy="28" class="small">ПДН · решение · выдача</tspan>
-  </text>
-
-  <path class="arrow" d="M600 1300 V1435 H220 V1470"/>
-  <path class="arrow" d="M600 1300 V1470"/>
-  <path class="arrow" d="M600 1435 H980 V1470"/>
-
-  <rect class="box" x="260" y="1680" width="680" height="100" rx="16" fill="#dcfce7" stroke="#4ade80"/>
-  <text x="600" y="1717" class="label">
-    <tspan x="600">Статус и данные займа возвращаются</tspan>
-    <tspan x="600" dy="28" class="small">кредитор · долг · график · платежи</tspan>
-  </text>
-
-  <path class="arrow" d="M220 1580 V1635 H400 V1680"/>
-  <path class="arrow" d="M600 1580 V1680"/>
-  <path class="arrow" d="M980 1580 V1635 H800 V1680"/>
-
-  <rect class="box" x="80" y="1880" width="660" height="120" rx="16" fill="#dbeafe" stroke="#60a5fa"/>
-  <text x="410" y="1917" class="label">
-    <tspan x="410">Единый ЛК Zaymovik</tspan>
-    <tspan x="410" dy="28" class="small">один кабинет для клиентов всех сайтов</tspan>
-    <tspan x="410" dy="24" class="note">отображает данные выбранной МФО</tspan>
-  </text>
-
-  <rect class="box" x="780" y="1880" width="340" height="120" rx="16" fill="#e2e8f0" stroke="#64748b"/>
-  <text x="950" y="1926" class="label">
-    <tspan x="950">Статистика</tspan>
-    <tspan x="950" dy="28" class="small">сверка · экономика</tspan>
-  </text>
-
-  <path class="arrow" d="M600 1780 V1830 H410 V1880"/>
-  <path class="arrow" d="M600 1830 H950 V1880"/>
-
-  <path class="feedback" d="M950 2000 V2110 H1150 V1210 H920"/>
-  <text x="1122" y="1605" class="note" transform="rotate(-90 1122 1605)">анализ → настройка порога и весов</text>
+  <rect x="24" y="1415" width="1152" height="220" rx="22" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="50" y="1450" class="layer">ПУЛ МФО</text>
+  <text x="1145" y="1450" class="note" style="text-anchor:end">Свои МФО + партнёры</text>
+  <path class="connector" d="M600 1345 V1465 M210 1465 H990"/>
+  <text x="735" y="1377" class="note">В одну подходящую МФО</text>
+  <path class="arrow" d="M210 1465 V1495"/>
+  <path class="arrow" d="M600 1465 V1495"/>
+  <path class="arrow" d="M990 1465 V1495"/>
+  <rect class="box" x="60" y="1495" width="300" height="80" rx="16" fill="#dcfce7" stroke="#4ade80"/>
+  <text x="210" y="1544" class="label">МФО 1</text>
+  <rect class="box" x="450" y="1495" width="300" height="80" rx="16" fill="#dcfce7" stroke="#4ade80"/>
+  <text x="600" y="1544" class="label">МФО 2</text>
+  <rect class="box" x="840" y="1495" width="300" height="80" rx="16" fill="#dcfce7" stroke="#4ade80"/>
+  <text x="990" y="1544" class="label">МФО N</text>
+  <text x="600" y="1610" class="small">Оформление и выдача</text>
 </svg>
